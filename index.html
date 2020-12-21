@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Infection Map - 0rn0b</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='map'>
+
+    </div>
+
+</body>
+<script src="index.js"></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiMHJuMGIiLCJhIjoiY2tpeWp1d3A0MTQ2ejJxbXcxYXE3bTBuMSJ9.1JR8WoYz5v3P04tLMsj_yA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 1,// starting zoom
+        center: [0, 30]
+    });
+    map.addControl(new mapboxgl.NavigationControl());
+    
+
+</script>
+
+</html>
